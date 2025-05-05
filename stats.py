@@ -14,9 +14,20 @@ def count_letters(full_text):
 			freq[letter] +=1 
 		else:
 			freq[letter] = 1
+	
+	#print(freq["t"])
+	
+	characters_sorted = sorted(freq.items(), reverse = True, key = lambda item : item[1])
+	
+	#print(characters_sorted)
 
-	test['t'] = 29493
-	test['p'] = 5952
-	test['c'] = 9011	
+
+##	test['t'] = 29493
+##	test['p'] = 5952
+##	test['c'] = 9011	
 		
-	return(letter,freq, test)
+	return(characters_sorted)
+
+
+
+
